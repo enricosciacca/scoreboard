@@ -1,0 +1,12 @@
+
+<h1>Scoreboard</h1>
+
+<div class="scoreboard">
+
+    <app-score *ngFor="let x of scorelist"
+        [score]="x.score"
+        [xname]="x.name"
+    ></app-score>
+
+</div>
+

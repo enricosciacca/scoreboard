@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ScoreComponent } from './score/score.component';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScoreComponent
+    ScoreComponent,
+    ScoreboardComponent
   ],
   imports: [
     BrowserModule

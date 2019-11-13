@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-score [score]="41" xname="Punteggio" ></app-score>
-  `,
+  template: `<app-scoreboard></app-scoreboard>`,
   styles: []
 })
 export class AppComponent {
