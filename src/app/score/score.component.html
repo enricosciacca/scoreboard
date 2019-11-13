@@ -1,0 +1,20 @@
+<div class="score">
+
+    <div class="scorebox"> 
+        <b>{{ score }}</b>
+        <div class="buttonpanel">
+            <button (click)="increment()">+</button>
+            <button (click)="decrement()">-</button>
+        </div>
+    </div>
+
+    {{ name }}
+    <div class="starbox">
+        <span *ngIf="score> 0">⭐</span>
+        <span *ngIf="score>20">⭐</span>
+        <span *ngIf="score>40">⭐</span>
+        <span *ngIf="score>60">⭐</span>
+        <span *ngIf="score>80">⭐</span>
+    </div>
+
+</div>

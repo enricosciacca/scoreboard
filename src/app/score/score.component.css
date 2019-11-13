@@ -1,0 +1,45 @@
+
+.score {
+    margin: 10px 20px;
+    border-left: solid 20px rgb(20, 200, 200);
+    padding: 10px;
+    background-color: hsl(180, 82%, 66%);
+    font-size: 30px;
+}
+
+.scorebox {
+    float: right;
+    font-size: 56px;
+}
+
+.starbox {
+    background-color: #0066B3;
+    margin: 3px;
+    font-size: 20px;
+    width: 100px;
+    height: 25px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.buttonpanel {
+    float: right;
+    width: 26px;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.buttonpanel button {
+    border: 0;
+    padding: 0;
+    margin: 1px;
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+}
+
+
+
+
