@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ScoreService } from '../score.service';
 
-const JSONSCORES = `
-{
-  "scores": [
-      {"name": "Gino", "score": 55},
-      {"name": "Lino", "score": 100},
-      {"name": "Pino", "score":  3},
-      {"name": "Nino", "score": 85}
-  ]
-}
-`;
+
 
 @Component({
   selector: 'app-scoreboard',
@@ -20,8 +12,8 @@ export class ScoreboardComponent implements OnInit {
 
   scorelist: { name: string, score: number };
 
-  constructor() {
-    this.scorelist = JSON.parse(JSONSCORES).scores;
+  constructor(scoreService: ScoreService) {
+    this.scorelist = scoreService.get().scores;
   }
 
   ngOnInit() {

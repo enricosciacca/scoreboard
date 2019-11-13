@@ -49,3 +49,8 @@ Esempio di punteggi:
     ]
 }
 ```
+
+Quarta parte
+------------------
+
+Fornire i dati sugli score (sempre da stringa costante, ma) attraverso un Service.
