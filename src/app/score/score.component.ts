@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 const SCORE_MAX = 100;
 const SCORE_MIN = 0;
@@ -11,19 +11,22 @@ const SCORE_MIN = 0;
 })
 export class ScoreComponent {
 
-  name:  string = "Punteggio";
-  score: number = 0;
+  @Input()
+  score: number;
+  // impostare con: [score]=""
 
-  increment() { 
+  @Input("xname") // nome del parametro diverso da
+  name: string;
+  // impostare con: [name]="'Punteggio'" o semplicemente name="Punteggio"
+
+  increment() {
     if (this.score<SCORE_MAX) this.score++;
   }
 
-  decrement() { 
+  decrement() {
     if (this.score>SCORE_MIN) this.score--;
   }
 
   constructor() { }
-
-
 
 }

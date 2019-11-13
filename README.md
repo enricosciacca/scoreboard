@@ -20,3 +20,9 @@ Un punteggio è composto da
 Etichetta    55 [+][-]
 [***  ]  
 ```
+
+Seconda parte
+------------------
+
+Rendere parametrico il Component e passare tramite parametri l'etichetta
+e il punteggio di partenza.
