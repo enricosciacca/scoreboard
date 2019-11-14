@@ -1,15 +1,8 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-const JSONSCORES = `
-{
-  "scores": [
-      {"name": "Gino", "score": 55},
-      {"name": "Lino", "score": 100},
-      {"name": "Pino", "score":  3},
-      {"name": "Nino", "score": 85}
-  ]
-}
-`;
+
+const ENDPOINT = "http://localhost:3000/scores/";
 
 
 @Injectable({
@@ -17,9 +10,21 @@ const JSONSCORES = `
 })
 export class ScoreService {
 
-  get() {
-    console.log(JSON.parse(JSONSCORES))
-    return JSON.parse(JSONSCORES);
+  constructor(private http: HttpClient) {}
+  /* SCORCIATOIA per scrivere questo:
+  private http: HttpClient;
+
+  constructor(http: HttpClient) {
+    this.http = http;
+  }
+  */
+
+
+  getIMieiGiocatori() {
+
+    return this.http.get(ENDPOINT);
+
+
   }
 
 }

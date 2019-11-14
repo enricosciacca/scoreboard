@@ -3,6 +3,12 @@ import { ScoreService } from '../score.service';
 
 
 
+interface Score {
+  name: string;
+  score: number;
+}
+
+
 @Component({
   selector: 'app-scoreboard',
   templateUrl: './scoreboard.component.html',
@@ -10,13 +16,27 @@ import { ScoreService } from '../score.service';
 })
 export class ScoreboardComponent implements OnInit {
 
-  scorelist: { name: string, score: number };
+  scorelist: Array<Score>;
 
-  constructor(scoreService: ScoreService) {
-    this.scorelist = scoreService.get().scores;
+  constructor(private scoreService: ScoreService) {
+    //this.scorelist = scoreService.get().scores; VECCHIO!
+    // non va bene con quanto visto prima, all'esecuzione del
+    // costruttore non ho ancora inizializzato "bene" l'app
   }
 
+  loadData() {
+    this.scoreService.getIMieiGiocatori().subscribe(
+      (data: Array<Score>) => {
+        this.scorelist = data;
+        console.log(data);
+      }
+    );
+  }
+
+
+
   ngOnInit() {
+    this.loadData();
   }
 
 }
