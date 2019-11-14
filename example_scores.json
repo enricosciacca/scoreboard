@@ -1,0 +1,8 @@
+{
+    "scores": [
+        {"id":1, "name": "Gino", "score": 55},
+        {"id":2, "name": "Lino", "score": 100},
+        {"id":3, "name": "Pino", "score":  3},
+        {"id":4, "name": "Nino", "score": 85}
+    ]
+}
