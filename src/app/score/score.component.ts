@@ -15,7 +15,7 @@ export class ScoreComponent {
   score: number;
   // impostare con: [score]=""
 
-  @Input("xname") // nome del parametro diverso da
+  @Input("xname") // nome del parametro diverso dal suo attributo
   name: string;
   // impostare con: [name]="'Punteggio'" o semplicemente name="Punteggio"
 

@@ -54,3 +54,11 @@ Quarta parte
 ------------------
 
 Fornire i dati sugli score (sempre da stringa costante, ma) attraverso un Service.
+
+
+Quinta parte
+------------------
+
+Usando il "finto server" (lanciato con ```npm run fakeserver```, raggiungibile a
+```http://localhost:3000/scores/``` ), ricavare i dati nel service via http.
+
